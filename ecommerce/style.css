@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: georgia;
+  scroll-behavior: smooth;
 
 }
 
@@ -78,15 +79,23 @@ body {
   font-weight: 300px;
 }
 
+#header .fa-solid.fa-dollar-sign {
+  color: green;
+}
+
 .emoji i {
   margin-right: 20px;
-  color:black;
+  color: black;
+}
+
+.emoji i:hover {
+  color: violet;
 }
 
 #navbar {
   padding: 15px;
   background-color: white;
-  border: 1px solid lightgreen;
+  border: 1px solidhsl(74, 100%, 50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +123,7 @@ body {
 
 #navbar li a:hover,
 #navbar li a.active {
-  color: limegreen;
+  color: hsl(74, 100%, 50%);
 }
 
 #navbar li a.active::after,
@@ -128,20 +137,20 @@ body {
   left: 20px;
 }
 
+
 .discount-banner {
-  background-color: limegreen;
+  background-color: hsl(74, 100%, 50%);
   color: #fff;
   display: flex;
   justify-content: left;
   text-align: left;
   position: relative;
-  top: 0;
-  width: 160%;
+  width: 140%;
   padding: 3px 30px 3px 30px;
   animation: slideLeft 20s infinite linear;
   white-space: nowrap;
   overflow: show;
-
+  position: relative;
 }
 
 .discount-banner .content {
@@ -172,11 +181,11 @@ body {
 }
 
 #hero {
-  background-image: url("/images/spilll copy.png");
+  background-image: url('images/spilll copyblurblur.jpg');
   height: 90vh;
   width: 100%;
   background-size: cover;
-  background-position: top 60% right 0;
+  background-position: top 50% right 0;
   padding: 0 80px;
   display: flex;
   flex-direction: column;
@@ -188,7 +197,7 @@ body {
 #hero h4 {
   padding-bottom: 15px;
   text-align: center;
-  margin-left: 85px;
+  margin-left: 5px;
   position: relative;
   left: -100%;
 }
@@ -196,20 +205,21 @@ body {
 #hero h2 {
   font-size: 100px;
   font-weight: 400px;
-  color: darkgreen;
+  color: hsl(74, 100%, 50%);
   position: relative;
   left: -100%;
-
+  margin: 20px 0;
 }
 
 #hero h1 {
   font: 70px;
   font-family: Georgia, sans-serif;
-  color: limegreen;
+  color: #b4e802;
   display: flex;
   margin-left: 100px;
   position: relative;
   left: -100%;
+
 }
 
 #hero p {
@@ -217,6 +227,15 @@ body {
   margin-left: 75px;
   position: relative;
   left: -100%;
+  color: black;
+}
+
+#hero button:hover,
+#hero h4:hover,
+#hero h2:hover,
+#hero h1:hover,
+#hero p:hover {
+  transform: scale(1.1);
 }
 
 #hero button {
@@ -224,16 +243,30 @@ body {
   font-size: 20px;
   font-weight: 700;
   border-radius: 0px;
-  margin-left: 475px;
+  margin-left: 500px;
   padding: 10px 25px 10px 20px;
-  background-color: limegreen;
+  background-color: hsl(74, 100%, 50%);
   color: white;
   background-repeat: no-repeat;
   cursor: pointer;
+  animation: flashBackground 7s infinite;
+}
+
+@keyframes flashBackground {
+
+  0%,
+  100% {
+    background-color: hsl(74, 100%, 50%);
+  }
+
+  50% {
+    background-color: violet;
+    /* Change to the desired flash color */
+  }
 }
 
 #hero button:hover {
-  background-color: violet;
+  background-color: white;
 }
 
 #features {
@@ -245,19 +278,23 @@ body {
   position: sticky;
 }
 
-#features .fe-box{
-  height: 300px;
-  width: 200px;
-  text-align: left;
-  margin: 0px;
-  padding: 5px 5px 5px 5px;
-  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+#features .fe-box {
+  margin-bottom: 15px;
+  width: 250px;
+  padding: 12px;
+  min-width: 0;
   border: 1px solid #cce7d0;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  position: relative;
+
 }
 
 #features .fe-box:hover {
-  background-color: lightgray;
+
   cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 
 #features .fe-box h6 {
@@ -266,6 +303,8 @@ body {
   color: black;
 }
 
+
+
 #features .fe-content {
   display: flex;
   flex-direction: column;
@@ -273,18 +312,21 @@ body {
 }
 
 #features .fe-box img {
- width: 160px;
- height: 200px;
+  width: 160px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 5px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
-#features .fe-box button{
- padding: 5px;
- margin: 10px;
- background-color: black;
- color:white;
- margin-left: 100px;
+#features .fe-box button {
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+  color: black;
+  margin-left: 140px;
+  border: 1px solid black;
 
 }
 
@@ -299,23 +341,58 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: lavender;
+
   border: 1px solid rgb(176, 176, 249);
   width: 100%;
-  height: 30vh;
+  height: 60vh;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  /* Move the image slightly down */
   position: sticky;
+  margin: 40px auto;
+  background-image: url('images/Group 12.png');
+  background-repeat: repeat-x;
+  background-size: 100%;
 }
+
+.community h2 {
+  color: violet;
+  animation: flash 6s infinite;
+  margin-left: 20px;
+}
+
+@keyframes flash {
+
+  0%,
+  100% {
+    color: violet;
+  }
+
+  50% {
+    color: white;
+    /* Change to the desired flash color */
+  }
+}
+
+.community h2:hover {
+  color: black;
+}
+
+.community img {
+  max-width: 50%;
+  display: none;
+}
+
 
 #product1 .pro-container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 30px;
+  justify-content: space-evenly;
+  padding: 0 -50px;
+
 }
 
 #product1 .pro {
+  margin-bottom: 15px;
   width: 250px;
   padding: 12px;
   min-width: 0;
@@ -331,9 +408,9 @@ body {
 }
 
 #product1 .pro img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 0px;
-  height: 200px;
+  height: 450px;
 }
 
 #product1 .pro .des {
@@ -357,7 +434,7 @@ body {
 #product1 .pro .des h4 {
   padding-top: 10px;
   font-size: 15px;
-  color: limegreen;
+  color: #b4e802 ;
   font-weight: 500;
 }
 
@@ -369,10 +446,19 @@ body {
 #product1 .pro .des a i {
   color: black;
   display: inline-block;
-  justify-content: space-between;
   font-size: 18px;
-  margin-left: 80px;
+  float: right;
+  margin-left: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-top: -2px;
 }
+
+#product1 .pro .des a i:hover {
+  color: violet;
+}
+
+
 
 #banner {
   display: flex;
@@ -380,7 +466,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: lavender;
   background: url('/images/sunscreen.png');
   background-position: cover;
   border: 1px solid rgb(0, 0, 0.9);
@@ -406,8 +491,7 @@ body {
 }
 
 #banner button {
-  background-color: limegreen;
-  color: white;
+  background-color: #b4e802;
   padding: 10px;
   margin: 7px;
   font-size: 18px;
@@ -426,42 +510,93 @@ body {
   margin: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
+  justify-content: space-around;
   flex-wrap: wrap;
   position: sticky;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+.last .fe-box:hover {
+
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 
 .last .fe-box {
   width: 250px;
   padding: 15px 15px;
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
-  border: .5px solid black;
+  border: .5px solid lightgray;
   border-radius: 4px;
 }
-.last .fe-box i{
+
+.last .fe-box i {
   margin-left: 200px;
+  color: black;
 }
 
-.last .fe-box img{
-  width: 200px;
-  height: 200px;
+.last .fe-box i:hover {
+  color: violet;
+}
+
+.last .fe-box img {
+  max-width: 100%;
+  margin-left: 5px;
 }
 
 .returnbanner {
   margin-bottom: -30px;
   margin-left: -20px;
   display: flex;
-  justify-content:space-evenly;
-  align-items:center;
-  padding:15px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
   background-color: #e6e6e6;
 
 }
 
+.returnbanner:hover {
+  color: violet;
+}
+
 .returnbanner h5 i {
   margin-right: 5px;
+  color: red;
 }
+
+.returnbanner h5 i:hover {
+  color: violet;
+}
+
+.fa-brands.fa-cc-mastercard {
+  background: linear-gradient(to right, yellow 50%, red 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fa-brands.fa-cc-mastercard:hover {
+  color: violet;
+}
+
+.fa-brands.fa-cc-visa {
+  background: linear-gradient(to right, blue 50%, yellow 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fa-brands.fa-cc-visa:hover {
+  color: violet;
+}
+
+.fa-brands.fa-paypal {
+  background: linear-gradient(to right, lightblue 50%, darkblue 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fa-brands.fa-paypal:hover {
+  color: violet;
+}
+
 
 #newsletter {
   display: flex;
@@ -490,9 +625,7 @@ body {
   margin-left: 40px;
 }
 
-#newsletter p span {
-
-}
+#newsletter p span {}
 
 #newsletter .form {
   display: flex;
@@ -517,8 +650,7 @@ body {
 }
 
 #newsletter button {
-  background-color: limegreen;
-  color: #fff;
+  background-color: #b4e802 color: black;
   white-space: nowrap;
   width: 30%;
   margin: -1px;
@@ -527,6 +659,9 @@ body {
   border-bottom-left-radius: 0;
 }
 
+#newsletter button:hover {
+  color: violet;
+}
 
 .smbanner {
   margin-top: -30px;
@@ -537,6 +672,7 @@ body {
   background-color: #e6e6e6;
   text-align: left;
 }
+
 
 .smbanner img {
   width: 20px;
@@ -596,6 +732,7 @@ footer a {
     left: -100%;
   }
 }
+
 /*
 @media (max-width:799px) {
   #navbar {

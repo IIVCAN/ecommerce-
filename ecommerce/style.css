@@ -95,7 +95,7 @@ body {
 #navbar {
   padding: 15px;
   background-color: white;
-  border: 1px solidhsl(74, 100%, 50%);
+  border: 1px solidhsl(93, 90%, 54%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +123,7 @@ body {
 
 #navbar li a:hover,
 #navbar li a.active {
-  color: hsl(74, 100%, 50%);
+  color: hsl(93, 90%, 54%);
 }
 
 #navbar li a.active::after,
@@ -139,15 +139,15 @@ body {
 
 
 .discount-banner {
-  background-color: hsl(74, 100%, 50%);
+  background-color: hsl(93, 90%, 54%);
   color: #fff;
   display: flex;
   justify-content: left;
   text-align: left;
   position: relative;
-  width: 140%;
+  width: 160%;
   padding: 3px 30px 3px 30px;
-  animation: slideLeft 20s infinite linear;
+  animation: slideLeft 15s infinite linear;
   white-space: nowrap;
   overflow: show;
   position: relative;
@@ -157,7 +157,6 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-
 }
 
 .discount-banner p {
@@ -205,7 +204,7 @@ body {
 #hero h2 {
   font-size: 100px;
   font-weight: 400px;
-  color: hsl(74, 100%, 50%);
+  color: hsl(93, 90%, 54%);
   position: relative;
   left: -100%;
   margin: 20px 0;
@@ -214,7 +213,7 @@ body {
 #hero h1 {
   font: 70px;
   font-family: Georgia, sans-serif;
-  color: #b4e802;
+  color:hsl(93, 90%, 54%);
   display: flex;
   margin-left: 100px;
   position: relative;
@@ -244,29 +243,15 @@ body {
   font-weight: 700;
   border-radius: 0px;
   margin-left: 500px;
-  padding: 10px 25px 10px 20px;
-  background-color: hsl(74, 100%, 50%);
-  color: white;
+  padding: 10px 10px 10px 10px;
+  background-color: hsl(93, 90%, 54%);
+  color: black;
   background-repeat: no-repeat;
   cursor: pointer;
-  animation: flashBackground 7s infinite;
-}
-
-@keyframes flashBackground {
-
-  0%,
-  100% {
-    background-color: hsl(74, 100%, 50%);
-  }
-
-  50% {
-    background-color: violet;
-    /* Change to the desired flash color */
-  }
 }
 
 #hero button:hover {
-  background-color: white;
+  background-color: magenta;
 }
 
 #features {
@@ -302,7 +287,6 @@ body {
   border-radius: 4px;
   color: black;
 }
-
 
 
 #features .fe-content {
@@ -347,7 +331,6 @@ body {
   height: 60vh;
   background-size: cover;
   background-position: center top;
-  /* Move the image slightly down */
   position: sticky;
   margin: 40px auto;
   background-image: url('images/Group 12.png');
@@ -387,15 +370,14 @@ body {
 #product1 .pro-container {
   display: flex;
   justify-content: space-evenly;
-  padding: 0 -50px;
+
 
 }
 
 #product1 .pro {
-  margin-bottom: 15px;
-  width: 250px;
+  width: 200px;
+  height: 50%;
   padding: 12px;
-  min-width: 0;
   border: 1px solid #cce7d0;
   border-radius: 0px;
   cursor: pointer;
@@ -408,9 +390,8 @@ body {
 }
 
 #product1 .pro img {
-  max-width: 100%;
-  border-radius: 0px;
-
+  width: 100%;
+  height: 40%;
 }
 
 #product1 .pro .des {
@@ -420,7 +401,7 @@ body {
 
 #product1 .pro .des span {
   color: #606063;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -433,8 +414,8 @@ body {
 
 #product1 .pro .des h4 {
   padding-top: 10px;
-  font-size: 15px;
-  color: #b4e802 ;
+  font-size: 13px;
+  color:black;
   font-weight: 500;
 }
 
@@ -474,6 +455,7 @@ body {
   background-size: cover;
   background-position: center;
   position: sticky;
+  padding: 20px;
 }
 
 #banner h2 {
@@ -491,14 +473,14 @@ body {
 }
 
 #banner button {
-  background-color: #b4e802;
-  padding: 10px;
+  background-color: hsl(93, 90%, 54%);
+  padding: 8px;
   margin: 7px;
   font-size: 18px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 200;
   border: 1px solid greenyellow;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #banner button:hover {
@@ -516,8 +498,12 @@ body {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
 }
 
-.last .fe-box:hover {
+.last h6 {
+  margin-bottom: -18px;
+  margin-left: 5px;
+}
 
+.last .fe-box:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 
@@ -530,7 +516,7 @@ body {
 }
 
 .last .fe-box i {
-  margin-left: 200px;
+  margin-left: 195px;
   color: black;
 }
 
@@ -650,9 +636,9 @@ body {
 }
 
 #newsletter button {
-  background-color: #b4e802 color: black;
+  background-color:hsl(93, 90%, 54%);
   white-space: nowrap;
-  width: 30%;
+  width:30%;
   margin: -1px;
   padding: 2px;
   border-top-left-radius: 0;
